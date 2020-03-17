@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详细信息与购买页面</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen"/>
+		<link rel="stylesheet" href="css/George.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/bootbox.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<style>
+			.jiagou{
+				text-align: center;
+				height: 40px;
+				width: 150px;
+				margin: 0;
+				border: 1px solid red;
+				line-height: 40px;
+				background-color: red;
+				color: white;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				border-radius: 5px;
+			}
+			.mai{
+				text-align: center;
+				height: 40px;
+				width: 150px;
+				margin: 0;
+				line-height: 40px;
+				border: 1px solid red;
+				background-color: #FFEDEE;
+				color: red;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				border-radius: 5px;
+			}
+			.xian{
+				text-align: center;
+				height: 40px;
+				width: 150px;
+				margin: 0;
+				line-height: 40px;
+				border: 1px solid #487A6F;
+				background-color: #487A6F;
+				color: white;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				border-radius: 5px;
+			}
+			.qian{
+				color: gray;
+			}
+			.big_img{
+				margin-bottom: 10px;
+			}
+			.small_img button{
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!--头部区域-->
+			<div class="header row">
+				<div class="col-md-5">
+					<img src="img/logo.jpg"/>
+				</div>
+				<div class="col-md-7">
+					<input class="text" type="text" />
+					<input class="button" type="button" value="搜 索" />
+				</div>
+			</div>
+			<!--导航区域-->
+			<div class="nav row">
+				<div class="col-md-12">
+					<a href="index.html">书屋首页</a>
+					<a href="library.html">乔治书房</a>
+					<a href="goods.html">我的订单</a>					
+					<a href="trolley.html">购物车</a>
+					<a href="person.html">个人中心</a>
+				</div>
+			</div>
+			<div class="b_section">
+				<p>
+					<span><a href="index.html">首页</a>></span>
+					<a href="">小说</a>>
+					<a href="">社会</a>>
+					<a href="">东野圭吾</a>：
+					<a href="">解忧杂货店</a>
+				</p>
+				<div class="col-md-12">
+					<div class="col-md-4">
+						<div class="big_img">
+							<img id="myimage" src="img/book/l1.jpg" width="300px"/>
+						</div>
+						<div class="small_img">
+							<button class="btn1" onclick="changeImage1()"><img src="img/book/s1.jpg" /></button>
+							<button class="btn2" onclick="changeImage2()"><img src="img/book/s2.jpg" /></button>
+							<button class="btn3" onclick="changeImage3()"><img src="img/book/s3.jpg" /></button>
+							<button class="btn4" onclick="changeImage4()"><img src="img/book/s4.jpg" /></button>
+							<button class="btn5" onclick="changeImage5()"><img src="img/book/s5.jpg" /></button>
+						</div>						
+					</div>
+					<script>
+						function changeImage1(){
+							element=document.getElementById('myimage')							
+						    element.src="img/book/l1.jpg";
+						}
+						function changeImage2(){
+							element=document.getElementById('myimage')							
+						    element.src="img/book/l2.jpg";
+						}
+						function changeImage3(){
+							element=document.getElementById('myimage')							
+						    element.src="img/book/l3.jpg";
+						}
+						function changeImage4(){
+							element=document.getElementById('myimage')							
+						    element.src="img/book/l4.jpg";
+						}
+						function changeImage5(){
+							element=document.getElementById('myimage')							
+						    element.src="img/book/l5.jpg";
+						}
+					</script>
+					<div class="col-md-8">
+						<h3><b>东野圭吾：解忧杂货店（店长乔治精心推荐，解忧杂货店帮你找回内心流失的东西）</b></h3>
+						<p>乔治说书：当你向别人要一个答案的时候，其实你的内心已经有了自己的答案。人与人真诚相对时产生的小小奇迹，不是推理小说，却更扣人心弦。。。中国影响力图书年度读者推荐大奖获得者，一本好书，乔治特别推荐给每天敲代码的程序媛。 </p>
+						<p class="qian">作者:(日)<a href="https://baike.baidu.com/item/东野圭吾/9506697?fr=aladdin" style="color: red;font-size: 14px;">东野圭吾</a>著， 新经典 出品</p>
+						<p class="qian">出版社:南海出版公司&nbsp;&nbsp;&nbsp;&nbsp;出版时间:2014年05月&nbsp;&nbsp;&nbsp;&nbsp;在乔治书屋读书榜排名<span style="color: red;">第一位</span></p>
+						
+						<p class="qian">乔治亲情价<b style="color: red;font-size: 32px;">￥34.50</b>&nbsp;&nbsp;定价<s>￥58.00</s></p><br />
+						<p>
+							<a href="trolley.html"><button class="jiagou">加入购物车</button></a>
+							<a href="trolley.html"><button class="mai">立即购买</button></a>
+							<a href="library.html"><button class="xian">加入书房</button></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer col-md-12">
+				<div class="copyright">				
+					Copyright © 2018本网站版权归<a href="">融创软通学员yueting</a>所有				
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>

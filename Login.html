@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学生注册登陆页面</title>
+		<link rel="stylesheet" href="css/Login.css" />
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body>
+		<div>
+			<h1>欢迎来到乔治书屋</h1>
+			<form action="" method="post" name="login" id="login">
+				<h3>用户登陆</h3>
+				<p><input id="uname" class="input-text" type="text" autofocus="autofocus" placeholder="姓名/手机号/邮箱"></p>
+				<p><input id="pwd" class="input-pwd" type="password" required="required"></p>
+				<p><input class="input-btn" type="button" value="登录" onclick="check()"></p>
+				<h6><a href="Login.html">忘记密码</a><a href="Login.html">免费注册</a></h6>
+			</form>
+			<script type="text/javascript">
+			function check() {
+				var user_name = uname.value; 
+				var user_pwd = pwd.value; 
+				if(user_name.length == 0){
+					alert("用户名不能为空");
+					return false;
+				}else if(user_pwd.length < 6){
+					alert('输入密码不小于6位');
+					return false;
+				}else if(user_name != '小猪佩奇'){
+					alert('用户名不正确');
+					return false;
+				}else{
+					window.location.href = 'index.html';
+				}
+			}
+		</script>
+
+		</div>
+	</body>
+</html>

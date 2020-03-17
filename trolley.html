@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>乔治购物车</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+		<link rel="stylesheet" href="css/George.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/bootbox.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<style>
+			h2 {
+				font-family: "华文行楷";
+				font-size: 26px;
+				line-height: 30px;
+				color: #487A6F;
+				border-bottom: 2px solid darkgray;
+			}
+			
+			table {
+				width: 1000px;
+				border: 1px solid gainsboro;
+				vertical-align: middle;
+				margin: 30px 60px;
+			}
+			
+			.sum {
+				height: 50px;
+				background-color: lightgray;
+			}
+			
+			.sum button {
+				height: 57px;
+				width: 100px;
+				background-color: gray;
+				border: 0;
+				font-size: 26px;
+				color: black;
+			}
+			
+			.sum button:hover {
+				height: 57px;
+				width: 100px;
+				background-color: red;
+				border: 0;
+				color: white
+			}
+			
+			table td {
+				text-align: center;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<!--头部区域-->
+			<div class="header row">
+				<div class="col-md-5">
+					<img src="img/logo.jpg" />
+				</div>
+				<div class="col-md-7">
+					<input class="text" type="text" />
+					<input class="button" type="button" value="搜 索" />
+				</div>
+			</div>
+			<!--导航区域-->
+			<div class="nav row">
+				<div class="col-md-12">
+					<a href="index.html">书屋首页</a>
+					<a href="library.html">乔治书房</a>
+					<a href="goods.html">我的订单</a>
+					<a href="trolley.html" style="font-size: 20px;color: red;">购物车</a>
+					<a href="person.html">个人中心</a>
+				</div>
+			</div>
+			<div>
+				<h2>全部商品</h2>
+				<table class="book1">
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="checkbox" checked="checked"/></td>
+						<td width="20%">
+							<img src="img/解忧杂货店.jpg">&nbsp;&nbsp;&nbsp;
+						</td>
+						<td style="width: 40%;text-align: left;">
+							<h3>东野圭吾《解忧杂货店》</h3>
+							<p>当你向别人要一个答案的时候，其实你的内心已经有了自己的答案。人与人真诚相对时产生的小小奇迹，不是推理小说，却更扣人心弦。。。</p>
+						</td>
+						<td><span style="color: #487A6F;">图书单价</span><b style="color: red;font-size: 26px;">￥34.50</b></td>
+						<td>
+							数量&nbsp;
+							<input class="min" type="button" value=" - ">
+							<input class="box" type="text" value="1" style="width: 25px;" />
+							<input id="add" class="add" type="button" value=" + ">
+							<script>
+								$(".add").click(function() {
+									$(this).prev().val(parseInt($(this).prev().val()) + 1);
+									$('#price').text('');
+									$('#price').text('￥' + $(".box").val() * 34.5);
+								});
+
+								$(".min").click(function() {
+									$(this).next().val(parseInt($(this).next().val()) - 1);
+									$('#price').text('');
+									$('#price').text('￥' + $(".box").val() * 34.5);
+								});
+								
+								$("input").blur(function(){
+								    $("#price").text('￥' + $(".box").val() * 34.5);
+								});
+							</script>
+						</td>
+						<td width="6%">
+							<a href="">删除</a>
+						</td>
+					</tr>
+				</table>
+				<table class="sum">
+					<tr>
+						<td><input type="checkbox" checked="checked"/>全选</td>
+						<td>删除</td>
+						<td>清空</td>
+						<td>分享</td>
+						<td style="text-align: right;" width="50%"><span id="price" style="color: red;font-size: 32px;vertical-align: middle;">￥34.5</span><button onclick="openme()">结  算</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="footer col-md-12">
+				<div class="col-md-3 section">
+					<h4>关于我们</h4>
+					<ul class="list">
+						<li>
+							<a href="index.html">乔治书屋</a>
+						</li>
+						<li>
+							<a href="">招贤纳士</a>
+						</li>
+						<li>
+							<a href="">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 section">
+					<h4>合作伙伴</h4>
+					<ul class="list">
+						<li>
+							<a href="http://www.91isoft.com/">融创软通</a>
+						</li>
+						<li>
+							<a href="http://www.slcupc.edu.cn/">胜利学院</a>
+						</li>
+						<li>
+							<a href="http://www.dangdang.com/">当当网</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 section">
+					<h4>支付方式</h4>
+					<ul class="list">
+						<li>
+							<a href="">货到付款</a>
+						</li>
+						<li>
+							<a href="">线上支付</a>
+						</li>
+						<li>
+							<a href="">银行转账</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 section">
+					<h4>订单服务</h4>
+					<ul class="list">
+						<li>
+							<a href="">配送服务查询</a>
+						</li>
+						<li>
+							<a href="">自助取消订单</a>
+						</li>
+						<li>
+							<a href="">自动修改订单</a>
+						</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					Copyright © 2018本网站版权归
+					<a href="">中国石油大学胜利学院yueting</a>所有
+				</div>
+			</div>
+		</div>
+		<div id="payma">
+			<p>请扫下面的二维码付款</p>
+			<img src="img/ma.jpg" /><br /><br />
+			<p>付款成功，即将跳转到
+				<a onclick="javascript:window.location.href='goods.html'">我的订单</a>...</p>
+		</div>
+		<script>
+			function openme() {
+				document.getElementById('payma').style.display = 'block';
+			}
+		</script>
+	</body>
+
+</html>

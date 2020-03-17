@@ -1,0 +1,305 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*头部区域*/
+.text{
+	margin-top: 50px;
+	margin-right: 0;
+	width: 420px;
+	height: 35px;
+	border: 2px solid red;
+	
+}
+.button{
+	margin-top: 50px;
+	margin-left: 0;
+	width: 100px;
+	height: 35px;
+	background-color: red;
+	color: white;
+	border: 0;
+	font-size: 16px;
+}
+/*导航栏a标签设置*/
+.nav a {
+	display: block;
+	width: 20%;
+	height: 52px;
+	line-height: 52px;
+	float: left;
+	border-bottom: 4px solid #adadad;
+	text-align: center;
+	text-decoration: none;
+	color: #3B4053;
+}
+
+.nav a:hover {
+	border-bottom: 4px solid #FF0000;
+	color: #FF0000;
+}
+
+
+/*左侧导航*/
+#aside {
+	background: #FFFFFF;
+	width: 240px;
+}
+
+.left h2 {
+	color: #FFFFFF;
+	width: 240px;
+	background: #487A6F;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-bottom:0 ;
+}
+
+#menu {
+	margin-top: 0;
+	width: 240px;
+	background: #FFFFFF;
+	text-align: center;
+	font-size: 16px;
+}
+
+#menu li {
+	width: 240px;
+	float: left;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	background: #FFFFFF;
+	position: relative;
+	border-left:1px solid #487A6F;
+	border-right:1px solid #487A6F;
+	border-bottom:1px dotted #487A6F;
+	height: 40px;	
+}
+
+.submenu dt {
+	font-weight: bold;
+	color: #487A6F;
+	text-align: left;
+}
+
+.submenu dd {
+	padding-left: 30px;
+	padding-right: 20px;
+}
+
+.submenu dd span {
+	float: left; 
+	border-right: 1px solid #CCCCCC;
+	line-height: 16px;
+}
+
+#menu li:hover {
+	border-right: none;
+}
+
+#menu li a {
+	color: #487A6F;
+}
+
+#menu li dd a {
+	font-size: 12px;
+	color: gray;
+	line-height: 16px;
+}
+
+#menu li:hover dd a {
+	font-size: 12px;
+	color: gray;
+	line-height: 16px;
+}
+
+#menu li:hover div a:hover {
+	color: orange;
+}
+
+#menu li:hover .tankuang {
+	left: 240px;
+	top: 0;
+}
+
+.tankuang {
+	float: left;
+	position: absolute;
+	left: -999em;
+	text-align: left;
+	border-left: 2px solid #487A6F;
+	border-top: 2px solid #487A6F;
+	border-right: 2px solid #487A6F;
+	border-bottom: 2px solid #487A6F;
+	width: 500px;
+	background: #FFFFFF;
+	padding: 5px 0 5px;
+	z-index: 190;
+}
+
+/*清楚容器浮动*/
+.clear {
+	clear: both;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+
+/*中间轮播视频广告*/
+
+
+/*右侧热销榜*/
+.right{
+	
+}
+.new{
+	
+}
+.tianqi{
+	height: 50px;
+}
+.new h3{
+	color: red;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: 1px solid #F5F5F5;
+}
+.new li{
+	text-align: left;
+	font-size: 16px;
+	color: #487A6F;
+	height: 35px;
+	list-style-type: none;
+}
+.new li a{
+	text-decoration: none;
+	color: #487A6F;
+}
+.new li a:hover{
+	color: red;
+}
+.new li .red{
+	color: red;
+}
+.new p{
+	text-align: right;
+}
+/*商品展示区*/
+.title{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-align: left;
+	font-size: 20px;
+	color: #487A6F;
+	line-height: 50px;
+	border-bottom: 2px solid #487A6F;
+}
+
+.shop{
+	text-align: center;
+}
+.shop img{
+	width: 180px;
+	height: 180px;
+}
+.book{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.book b{
+	color: red;
+}
+.book s{
+	color: gray;
+}
+.book span{
+	text-decoration: none;
+	font-size: 16px;
+	color: #487A6F;
+}
+.book img:hover{
+	opacity: 0.7;
+}
+.book a:hover span{
+	text-decoration: none;
+	color: orange;
+}
+.title em{
+	font-size: 26px;
+	font-family: "微软雅黑";
+	color: red;
+}
+
+/*底部区域*/
+.footer{
+	text-align: center;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.section{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.footer li{
+	list-style-type: none;
+}
+.footer li a{
+	color: grey;
+}
+.footer li a:hover{
+	color: red;
+}
+.copyright{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+/*book页面*/
+.b_section p a{
+	color: gray;
+	line-height: 50px;
+	font-size: 16px;
+}
+.b_section p span a{
+	font-size: 20px;
+	color: #487A6F;
+}
+.b_section p a:hover{
+	color: red;
+}
+
+#payma{
+	display: none;
+	position: absolute;
+	margin-top: 20px;
+	height: 100%;
+	width: 100%;
+	z-index: 1001;
+	left: 0px;
+	top: 0px;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+}
+#payma img{
+	width: 400px;
+	height: 400px;
+}
+#payma p{
+	color: white;
+	font-weight: 400;
+	font-size: 24px;
+}
+
